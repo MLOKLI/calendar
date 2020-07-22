@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -26,12 +26,20 @@
 
   <!-- A stylesheet to design the pages. -->
   <link href="calendar/src/global.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="calendar/calendar.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
-  test
+  <input type="range" id="quarter" min="1" max="4" value="1">
+    <output id="info">1</output>
+    <input type="text" id="family" value="Петров А.">
+    <input type="submit" id="enter" value="Открыть">
+
+    <div id="calendar"></div>
+
+    <script src="calendar/calendar.js"></script>
   <script>
     if (navigator.serviceWorker.controller) {
   console.log('[PWA Builder] active service worker found, no need to register')
