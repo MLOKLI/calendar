@@ -1,12 +1,12 @@
 {
-  "name": "PWA Starter",
+  "name": "Рабочий календарь",
   "display": "standalone",
   "start_url": "/calendar/",
-  "short_name": "starter",
+  "short_name": "Работа",
   "theme_color": "#686bd2",
-  "description": "This is a PWA Starter app",
+  "description": "Календарь с рабочим графиком сотрудников",
   "orientation": "any",
-  "background_color": "#686bd2",
+  "background_color": "#eaeaea",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [
