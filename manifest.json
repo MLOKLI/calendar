@@ -1,7 +1,7 @@
 {
   "name": "PWA Starter",
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "/calendar/",
   "short_name": "starter",
   "theme_color": "#686bd2",
   "description": "This is a PWA Starter app",
