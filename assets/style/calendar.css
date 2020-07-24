@@ -68,3 +68,18 @@ td {
 .none-block {
     display: none;
 }
+
+.card.windows {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+    border-top: 2px solid black;
+}
+
+.card.windows.error {
+    background: #e07373;
+    color: #fff;
+    font-size: 16px;
+}
