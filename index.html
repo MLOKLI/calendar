@@ -168,7 +168,7 @@
 		function handleStateChange() {
 		  //var timeBadge = new Date().toTimeString().split(' ')[0];
 		  //var newState = document.createElement('p');
-		  var state = navigator.onLine ? 'online' : 'offline';
+		  var state = navigator.onLine ? '' : '<div class="card windows error"><div class="card-body">Отсутствует интернет</div></div>';
 		  //newState.innerHTML = '' + timeBadge + ' Connection state changed to ' + state + '.';
 		  //target.appendChild(newState);
 		  target.innerHTML = state;
