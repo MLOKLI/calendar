@@ -26,41 +26,6 @@ let quarterUrl = [
 // praz - праздничный-рабочий
 // dop-1 - доп-утро
 // dop-2 - доп-вечер
-let schedule = {
-    4: {
-        1: '',
-        2: '',
-        3: 'rab',
-        4: 'rab',
-        5: 'rab',
-        6: '',
-        7: '',
-        8: 'rab',
-        9: 'rab',
-        10: '',
-        11: '',
-        12: '',
-        13: 'rab',
-        14: 'rab',
-        15: '',
-        16: '',
-        17: 'rab',
-        18: 'rab',
-        19: 'rab',
-        20: '0',
-        21: '0',
-        22: 'rab',
-        23: 'rab',
-        24: '',
-        25: '',
-        26: '',
-        27: 'rab',
-        28: 'praz',
-        29: '',
-        30: '',
-    }
-};
-
 let grafic = {};
 function getData(data) {
 
@@ -105,24 +70,32 @@ $.ajax({
     
     switch (data) {
         case '1':
+            table += '<div class="row">';
             table += createCalendar(2020, 1);
             table += createCalendar(2020, 2);
             table += createCalendar(2020, 3);
+            table += '</div>';
             break;
         case '2':
+            table += '<div class="row">';
             table += createCalendar(2020, 4);
             table += createCalendar(2020, 5);
             table += createCalendar(2020, 6);
+            table += '</div>';
             break;
         case '3':
+            table += '<div class="row">';
             table += createCalendar(2020, 7);
             table += createCalendar(2020, 8);
             table += createCalendar(2020, 9);
+            table += '</div>';
             break;
         case '4':
+            table += '<div class="row">';
             table += createCalendar(2020, 10);
             table += createCalendar(2020, 11);
             table += createCalendar(2020, 12);
+            table += '</div>';
             break;
         default:
             table = 'error';
@@ -140,7 +113,7 @@ function createCalendar(year, month) {
       let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
       let d = new Date(year, mon);
 
-      let table = '<table><caption>'+monthName[mon]+'</caption><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
+      let table = '<div class="col-sm"><table class="table"><thead><tr><th scope="col">ПН<th><th scope="col">ВТ</th><th scope="col">СР</th><th scope="col">ЧТ</th><th scope="col">ПТ</th><th scope="col">СБ</th><th scope="col">ВС</th></tr></thead><tbody>';
 
       // пробелы для первого ряда
       // с понедельника до первого дня месяца
@@ -183,7 +156,7 @@ function createCalendar(year, month) {
       }
 
       // закрыть таблицу
-      table += '</tr></table>';
+      table += '</tbody></table></div>';
 
       return table;
 }
