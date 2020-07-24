@@ -168,7 +168,7 @@
 		function handleStateChange() {
 		  //var timeBadge = new Date().toTimeString().split(' ')[0];
 		  //var newState = document.createElement('p');
-		  var state = navigator.onLine ? '' : '<div class="card windows error"><div class="card-body">Отсутствует интернет</div></div>';
+		  var state = navigator.onLine ? '' : '<div class="alert alert-primary alert-dismissible fade show" role="alert"><strong>Holy guacamole!</strong> You should check in on some of those fields below.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>';
 		  //newState.innerHTML = '' + timeBadge + ' Connection state changed to ' + state + '.';
 		  //target.appendChild(newState);
 		  target.innerHTML = state;
