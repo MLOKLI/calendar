@@ -194,3 +194,9 @@ if (localStorage.length == 2) {
     });
     console.log('2');
 }
+
+function setingsUser() {
+    localStorage.clear();
+    $('.bg-login').toggleClass('none-block');
+    $('#calendar').toggleClass('none-block');
+}
