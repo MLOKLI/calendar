@@ -45,6 +45,15 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 @import url('https://fonts.googleapis.com/css?family=Orbitron:900');
 
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #323232;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-x: hidden;
+    //background: #2d3540;
+}
+
 a{
     color: #888888;
     text-decoration: none;
