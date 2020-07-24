@@ -57,6 +57,11 @@ td {
     color: #fff;
 }
 
+.Today {
+    background: #54c14d;
+    color: #fff;
+}
+
 .none-block {
     display: none;
 }
