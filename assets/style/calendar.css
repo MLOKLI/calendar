@@ -76,17 +76,10 @@ td {
     border-radius: 0px;
     border: none;
     border-top: 2px solid black;
-    max-height: 0;
-    transition: max-height 0.15s ease-out;
 }
 
 #Windows > .card.windows.error {
     background: #e07373;
     color: #fff;
     font-size: 16px;
-}
-
-#Windows:hover > .card.windows {
-    max-height: 500px;
-    transition: max-height 0.25s ease-in;
 }
