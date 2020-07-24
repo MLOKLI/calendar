@@ -181,6 +181,8 @@ if (localStorage.length == 2) {
     getData(localStorage.getItem('quarterUser'));
     $('.bg-login').toggleClass('none-block');
     $('#calendar').toggleClass('none-block');
+    $('#calendar').empty();
+    $('#calendar').append('<h1>Загрузка календаря</h1>');
 } else {
     localStorage.clear();
     $('#enter').click(function() {
