@@ -177,4 +177,6 @@ $("#quarter").change(function() {
 
 $('#enter').click(function() {
     getData($( "#quarter" ).val());
+    localStorage.setItem('nameUser', $( "#family" ).val());
+    localStorage.setItem('quarterUser', $( "#quarter" ).val());
 });
