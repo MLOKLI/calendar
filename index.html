@@ -176,6 +176,7 @@
 		  var state = navigator.onLine ? 'online' : 'offline';
 		  newState.innerHTML = '' + timeBadge + ' Connection state changed to ' + state + '.';
 		  target.appendChild(newState);
+			console.log(state);
 		}
 
 		window.addEventListener('online', handleStateChange);
