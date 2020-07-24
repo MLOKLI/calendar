@@ -1,4 +1,4 @@
-var ARV = 'asd';
+var statusScript = 0;
 
 let monthName = [
     'январь',
@@ -102,9 +102,11 @@ $.ajax({
     }
 
     $('#calendar').empty();
-    $('.bg-login').toggleClass('none-block');
     $('#calendar').append(table);
-    $('#calendar').toggleClass('none-block');
+    if (statusScript != 1) {
+        $('.bg-login').toggleClass('none-block');
+        $('#calendar').toggleClass('none-block');
+    }
 
 })
 
@@ -175,7 +177,10 @@ $("#quarter").change(function() {
     //console.log(table);
 });
 if (localStorage.length == 2) {
+    statusScript = 1;
     getData(localStorage.getItem('quarterUser'));
+    $('.bg-login').toggleClass('none-block');
+    $('#calendar').toggleClass('none-block');
 } else {
     localStorage.clear();
     $('#enter').click(function() {
