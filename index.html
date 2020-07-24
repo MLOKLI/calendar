@@ -9,7 +9,7 @@
 
   <!-- This meta viewport ensures the webpage's dimensions change according to the device it's on. This is called Responsive Web Design.-->
   <meta name="viewport"
-    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta name="description" content="Календарь с рабочим графиком сотрудников">
 
   <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
@@ -40,19 +40,76 @@
   <link rel="manifest" href="manifest.json">
 
   <!-- A stylesheet to design the pages. -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="assets/style/calendar.css">-->
+  <link rel="stylesheet" href="assets/style/login.css">
   <link rel="stylesheet" href="assets/style/calendar.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  
 </head>
 
-<body>
-  <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
-  <input type="range" id="quarter" min="1" max="4" value="1">
+<body class="sticky-header">
+	<section class="bg-login" style="display: block;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="wrapper-page">
+                            <div class="account-pages">
+                                <div class="account-box">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <form class="form mt-5 contact-form" action="index.html" onsubmit="return false;">
+                                                <div class="form-group ">
+                                                    <div class="col-sm-12">
+                                                        <input id="family" class="form-control form-control-line" type="text" placeholder="Фамилия" required="required">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row col-sm-12">
+                                                    <div class="col-sm-11">
+														<label for="quarter">Квартал</label>
+														<input class="form-control-range" type="range" id="quarter" min="1" max="4" value="1">
+                                                    </div>
+                                                    <div class="col-sm-1">
+														<output class="mt-4" id="info">1</output>
+													</div>
+                                                </div>
+												<!--<div class="form-group row">
+                                                    <div class="col-sm-10">
+														<input type="range" class="form-control-range" id="formControlRange">
+													</div>
+													<label class="col-sm-2 col-form-label"> 1</label>
+												</div>-->
+												
+                                                <div class="form-group">
+                                                    <div class="col-sm-12 mt-4">
+                                                        <button class="btn btn-primary btn-block" id="enter" type="submit">Открыть</button>
+                                                    </div>
+                                                </div>
+												
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div id="calendar" style="display: none;"></div>
+
+	<!--
+	<input type="range" id="quarter" min="1" max="4" value="1">
     <output id="info">1</output>
     <input type="text" id="family" value="Петров А.">
     <input type="submit" id="enter" value="Открыть">
 
     <div id="calendar"></div>
+	-->
 
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="assets/js/calendar.js"></script>
   <script>
     if (navigator.serviceWorker.controller) {
