@@ -100,7 +100,9 @@ $.ajax({
         default:
             table = 'error';
     }
-
+    
+    $('#dataInfo').empty();
+    $("#dataInfo").append(localStorage.getItem('nameUser')+' | '+localStorage.getItem('quarterUser'));
     $('#calendar').empty();
     $('#calendar').append(table);
     if (statusScript != 1) {
