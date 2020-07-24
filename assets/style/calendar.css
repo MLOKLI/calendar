@@ -15,6 +15,9 @@ caption {
     border-bottom: none;
     caption-side: inherit;
     text-align: center;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 18px;
 }
 
 tr {
