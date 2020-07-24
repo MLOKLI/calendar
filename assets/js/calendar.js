@@ -45,7 +45,7 @@ $.ajax({
     for (let i=1; i<result['result'].length-14; i++) {
         if (monthName.indexOf(result['result'][i][0]) != -1) {
             month = monthName.indexOf(result['result'][i][0])+1;
-            numberUser = result['result'][i].indexOf($( "#family" ).val());
+            numberUser = result['result'][i].indexOf(localStorage.getItem('nameUser') ? localStorage.getItem('nameUser') : $( "#family" ).val());
             grafic[month] = {};
             //console.log(result['result'][i][0]+' | '+result['result'][i][22]);
         }
@@ -174,9 +174,13 @@ $("#quarter").change(function() {
     
     //console.log(table);
 });
-
-$('#enter').click(function() {
-    getData($( "#quarter" ).val());
-    localStorage.setItem('nameUser', $( "#family" ).val());
-    localStorage.setItem('quarterUser', $( "#quarter" ).val());
-});
+if (localStorage.length == 2) {
+    getData(localStorage.getItem('quarterUser'));
+} else {
+    localStorage.clear();
+    $('#enter').click(function() {
+        getData($( "#quarter" ).val());
+        localStorage.setItem('nameUser', $( "#family" ).val());
+        localStorage.setItem('quarterUser', $( "#quarter" ).val());
+    });
+}
