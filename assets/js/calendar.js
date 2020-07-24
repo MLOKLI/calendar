@@ -205,4 +205,5 @@ function setingsUser() {
     localStorage.clear();
     $('.bg-login').toggleClass('none-block');
     $('#calendar').toggleClass('none-block');
+    statusScript = 0;
 }
