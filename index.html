@@ -137,6 +137,9 @@
 	  </div>-->
 	</div>
 <div id="Windows"></div>
+<p>Turn the network connection on/off to see the changes.</p>
+<p>Initial connection state was <b id="status">unknown</b>.</p>
+<div id="target"></div>
 	<!--
 	<input type="range" id="quarter" min="1" max="4" value="1">
     <output id="info">1</output>
@@ -162,19 +165,17 @@
 }
     </script>
 	<script>
-		let statusInternet = navigator.onLine ? 'online' : 'offline';
-		
+		document.getElementById('status').innerHTML = navigator.onLine ? 'online' : 'offline';
+		var target = document.getElementById('target');
+
 		function handleStateChange() {
-		  if (navigator.onLine) {
-		  	statusInternet = 'online';
-		  } else {
-		  	statusInternet = 'offline';
-		  }
-			$('#Windows').append(statusInternet);
+		  var timeBadge = new Date().toTimeString().split(' ')[0];
+		  var newState = document.createElement('p');
+		  var state = navigator.onLine ? 'online' : 'offline';
+		  newState.innerHTML = '' + timeBadge + ' Connection state changed to ' + state + '.';
+		  target.appendChild(newState);
 		}
 		
-		console.log(statusInternet);
-
 		window.addEventListener('online', handleStateChange);
 		window.addEventListener('offline', handleStateChange);
 	</script>
