@@ -179,11 +179,9 @@ $("#quarter").change(function() {
 });
     
 $('#enter').click(function() {
-    if (localStorage.length != 2) {
         getData($( "#quarter" ).val());
         localStorage.setItem('nameUser', $( "#family" ).val());
         localStorage.setItem('quarterUser', $( "#quarter" ).val());
-    }
 });
 
 if (localStorage.length == 2) {
