@@ -29,15 +29,15 @@ td {
 }
 
 .output {
-    background: #e0e0e0;
+    background: #ffbdbd;
 }
 
 .weekdays.rab {
-    background: #b5b5b5;
+    background: #a9b0ff;
 }
 
 .output.rab {
-    background: #b5b5b5;
+    background: #7980cc;
 }
 
 .praz {
@@ -48,12 +48,12 @@ td {
 }
 
 .dop-1 {
-    background: #484848;
+    background: #48aaaf;
     color: #fff;
 }
 
 .dop-2 {
-    background: #484848;
+    background: #af48a2;
     color: #fff;
 }
 
