@@ -178,6 +178,8 @@ if (localStorage.length == 2) {
     $('#calendar').toggleClass('none-block');
     $('#calendar').empty();
     $('#calendar').append('<h1>Загрузка календаря</h1>');
+    
+    console.log('1');
 } else {
     localStorage.clear();
     
@@ -190,4 +192,5 @@ if (localStorage.length == 2) {
         localStorage.setItem('nameUser', $( "#family" ).val());
         localStorage.setItem('quarterUser', $( "#quarter" ).val());
     });
+    console.log('2');
 }
