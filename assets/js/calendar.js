@@ -103,7 +103,7 @@ $.ajax({
 
     $('#calendar').empty();
     $('#calendar').append(table);
-    if (localStorage.length != 2) {
+    if (statusScript != 1) {
         $('.bg-login').toggleClass('none-block');
         $('#calendar').toggleClass('none-block');
     }
