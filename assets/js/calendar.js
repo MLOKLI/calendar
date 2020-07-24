@@ -113,8 +113,7 @@ $.ajax({
 }
 
 function createCalendar(year, month) {
-      let today = [new Date().getMonth(), new Date().getDay()];
-            console.log(today);
+      let today = [new Date().getMonth(), new Date().getDate()];
       let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
       let d = new Date(year, mon);
 
@@ -135,12 +134,18 @@ function createCalendar(year, month) {
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()];
             }
+            if (today[0] == month && today[1] == d.getDate()) {
+                table += ' Today';
+            }
             table +='">' + d.getDate() + '</td>';
         }
         else {
             table += '<td class="weekdays';
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()];
+            }
+            if (today[0] == month && today[1] == d.getDate()) {
+                table += ' Today';
             }
             table +='">' + d.getDate() + '</td>';
         }
