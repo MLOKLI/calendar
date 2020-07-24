@@ -162,6 +162,8 @@
 }
     </script>
 	<script>
+		let statusInternet = navigator.onLine ? 'online' : 'offline';
+		
 		function handleStateChange() {
 		  if (navigator.onLine) {
 		  	$('#Windows').append('Онлайн');
