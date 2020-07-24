@@ -80,11 +80,18 @@ td {
     bottom: 0px;
     border-radius: 0px;
     border: none;
-    border-top: 2px solid black;
+    border-top: 1px solid #bdbdbd;
 }
 
 #Windows > .card.windows.error {
     background: #e07373;
     color: #fff;
+    font-size: 16px;
+}
+
+
+#Windows > .card.windows.info {
+    color: #fff;
+    background: #6594fd;
     font-size: 16px;
 }
