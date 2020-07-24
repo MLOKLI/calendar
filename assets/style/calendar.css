@@ -13,6 +13,8 @@ table {
 caption {
     border: 1px solid black;
     border-bottom: none;
+    caption-side: inherit;
+    text-align: center;
 }
 
 tr {
