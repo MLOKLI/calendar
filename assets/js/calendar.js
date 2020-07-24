@@ -172,6 +172,20 @@ function getDay(date) { // получить номер дня недели, от
     return day - 1;
 }
 
+$("#quarter").change(function() {
+    if (localStorage.length != 2) {
+        $('#info').val($( "#quarter" ).val());
+    }
+});
+    
+$('#enter').click(function() {
+    if (localStorage.length != 2) {
+        getData($( "#quarter" ).val());
+        localStorage.setItem('nameUser', $( "#family" ).val());
+        localStorage.setItem('quarterUser', $( "#quarter" ).val());
+    }
+});
+
 if (localStorage.length == 2) {
     statusScript = 1;
     getData(localStorage.getItem('quarterUser'));
@@ -179,21 +193,8 @@ if (localStorage.length == 2) {
     $('#calendar').toggleClass('none-block');
     $('#calendar').empty();
     $('#calendar').append('<h1>Загрузка календаря</h1>');
-    
-    console.log('1');
 } else {
     localStorage.clear();
-    
-    $("#quarter").change(function() {
-        $('#info').val($( "#quarter" ).val());
-    });
-    
-    $('#enter').click(function() {
-        getData($( "#quarter" ).val());
-        localStorage.setItem('nameUser', $( "#family" ).val());
-        localStorage.setItem('quarterUser', $( "#quarter" ).val());
-    });
-    console.log('2');
 }
 
 function setingsUser() {
