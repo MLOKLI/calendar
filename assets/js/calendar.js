@@ -33,7 +33,6 @@ let table = '';
 $.ajax({
     url: 'https://script.google.com/macros/s/AKfycbz4D_xFAYYJxNF6FJeC95gRH9vdJSGh_d7cHb0TdpYGJRLjI1Us/exec'
 }).then(function (result) {
-    ARV = result;
     //console.log(result['result'][1][0])
     //console.log(result['result'][1][22])
     //console.log(result['result'][2][0])
@@ -114,7 +113,7 @@ $.ajax({
 }
 
 function createCalendar(year, month) {
-      let today = {new Date().getMonth(), new Date().getDay()};
+      let today = [new Date().getMonth(), new Date().getDay()];
             console.log(today);
       let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
       let d = new Date(year, mon);
