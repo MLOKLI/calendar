@@ -56,3 +56,7 @@ td {
     background: #484848;
     color: #fff;
 }
+
+.none-block {
+    dispaly: none;
+}
