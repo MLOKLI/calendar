@@ -171,11 +171,6 @@ function getDay(date) { // получить номер дня недели, от
     return day - 1;
 }
 
-$("#quarter").change(function() {
-    $('#info').val($( "#quarter" ).val());
-    
-    //console.log(table);
-});
 if (localStorage.length == 2) {
     statusScript = 1;
     getData(localStorage.getItem('quarterUser'));
@@ -185,6 +180,11 @@ if (localStorage.length == 2) {
     $('#calendar').append('<h1>Загрузка календаря</h1>');
 } else {
     localStorage.clear();
+    
+    $("#quarter").change(function() {
+        $('#info').val($( "#quarter" ).val());
+    });
+    
     $('#enter').click(function() {
         getData($( "#quarter" ).val());
         localStorage.setItem('nameUser', $( "#family" ).val());
