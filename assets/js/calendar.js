@@ -144,13 +144,13 @@ function createCalendar(year, month) {
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()];
             }
-            if (today[0] == month && today[1] == d.getDate()) {
+            if (today[0]+1 == month && today[1] == d.getDate()) {
                 table += ' Today';
             }
             table +='">' + d.getDate() + '</td>';
         }
           
-        console.log('Печатает: '+d.getDate()+'.'+month+' | Сейчас'+today[1]+'.'+today[0])
+        console.log('Печатает: '+d.getDate()+'.'+month+' | Сейчас'+today[1]+'.'+today[0]+1)
 
         if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
           table += '</tr><tr>';
