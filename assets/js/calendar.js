@@ -103,10 +103,8 @@ $.ajax({
 
     $('#calendar').empty();
     $('#calendar').append(table);
-    if (statusScript != 1) {
-        $('.bg-login').toggleClass('none-block');
-        $('#calendar').toggleClass('none-block');
-    }
+    $('.bg-login').toggleClass('none-block');
+    $('#calendar').toggleClass('none-block');
 
 })
 
