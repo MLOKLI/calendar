@@ -163,16 +163,16 @@
 }
     </script>
 	<script>
-		document.getElementById('Windows').innerHTML = navigator.onLine ? 'online' : 'offline';
-
 		var target = document.getElementById('Windows');
+		target.innerHTML = navigator.onLine ? 'online' : 'offline';
 
 		function handleStateChange() {
-		  var timeBadge = new Date().toTimeString().split(' ')[0];
-		  var newState = document.createElement('p');
+		  //var timeBadge = new Date().toTimeString().split(' ')[0];
+		  //var newState = document.createElement('p');
 		  var state = navigator.onLine ? 'online' : 'offline';
-		  newState.innerHTML = '' + timeBadge + ' Connection state changed to ' + state + '.';
-		  target.appendChild(newState);
+		  //newState.innerHTML = '' + timeBadge + ' Connection state changed to ' + state + '.';
+		  //target.appendChild(newState);
+		  target.innerHTML = state;
 		}
 		
 		window.addEventListener('online', handleStateChange);
