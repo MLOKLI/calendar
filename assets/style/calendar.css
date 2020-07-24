@@ -57,6 +57,8 @@ td {
     color: #fff;
 }
 
+.weekdays.Today,
+.output.Today
 .weekdays.rab.Today,
 .output.rab.Today {
     background: #54c14d;
