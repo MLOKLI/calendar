@@ -74,13 +74,14 @@ td {
     display: none;
 }
 
-#Windows > .card.windows {
+#Windows > .alert {
     position: absolute;
     width: 100%;
     bottom: 0px;
     border-radius: 0px;
     border: none;
     border-top: 1px solid #bdbdbd;
+    margin: 0px;
 }
 
 #Windows > .card.windows.error {
