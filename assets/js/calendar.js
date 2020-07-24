@@ -103,9 +103,10 @@ $.ajax({
 
     $('#calendar').empty();
     $('#calendar').append(table);
-    $('.bg-login').toggleClass('none-block');
-    $('#calendar').toggleClass('none-block');
-
+    if (localStorage.length != 2) {
+        $('.bg-login').toggleClass('none-block');
+        $('#calendar').toggleClass('none-block');
+    }
 })
 
 }
