@@ -102,7 +102,9 @@ $.ajax({
     }
 
     $('#calendar').empty();
+    $('.bg-login').toggleClass('none-block');
     $('#calendar').append(table);
+    $('#calendar').toggleClass('none-block');
 
 })
 
