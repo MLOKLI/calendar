@@ -176,6 +176,11 @@
 		
 		window.addEventListener('online', handleStateChange);
 		window.addEventListener('offline', handleStateChange);
+		
+		$(window).scroll(function (){
+			$('#Windows').css('position','fixed');
+			$('#Windows').css('bottom','0');
+		  });
 	</script>
 </body>
 
