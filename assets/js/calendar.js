@@ -53,7 +53,7 @@ $.ajax({
             //console.log(result['result'][i][0]);
             if (result['result'][i][numberUser] != '') {
                 let time = result['result'][i][numberUser].split('-');
-                console.log(time);
+                console.log(time+' | '+result['result'][i][numberUser+1]);
                 if (Number(time[1].split(':')[0])-Number(time[0].split(':')[0]) == 12) {
                     statusJob = 'rab';
                 }
