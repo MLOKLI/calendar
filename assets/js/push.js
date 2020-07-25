@@ -53,3 +53,4 @@ function persistentNotification() {
   } catch (err) {
     alert('Notification API error: ' + err);
   }
+}
