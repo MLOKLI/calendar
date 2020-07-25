@@ -5,14 +5,14 @@ if ('Notification' in window) {
     $status.innerText = 'заблокированы';
   } else if (Notification.permission == 'granted') {
     $status.innerText = 'разрешены';
-  } else if (Notification.permission == 'granted') {
+  } else {
     $status.innerText = 'не доступны';
   }
 }
 
 function requestPermission() {
   if (!('Notification' in window)) {
-    console.log('Браузер не поддерживает локальные push-уведомления.');
+    alert('Notification API not supported!');
     return;
   }
   
@@ -21,7 +21,7 @@ function requestPermission() {
       $status.innerText = 'заблокированы';
     } else if (result == 'granted') {
       $status.innerText = 'разрешены';
-    } else if (result == 'granted') {
+    } else {
       $status.innerText = 'не доступны';
     }
   });
