@@ -87,3 +87,7 @@ td {
 #Windows > .alert > .close {
     padding: .5rem 1.25rem;
 }
+
+#calendar {
+    padding: 0px;
+}
