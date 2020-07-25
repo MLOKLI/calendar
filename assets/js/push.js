@@ -50,7 +50,7 @@ function persistentNotification() {
     navigator.serviceWorker.getRegistration()
       .then((reg) => reg.showNotification("Hi there - persistent!", {
           body: 'Buzz! Buzz!',
-          icon: '../assets/icons/apple-icon-180x180.png',
+          icon: 'assets/icons/apple-icon-180x180.png',
           vibrate: [200, 100, 200, 100, 200, 100, 200],
           tag: 'vibration-sample'
         }))
