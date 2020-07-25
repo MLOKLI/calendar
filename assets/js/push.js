@@ -17,7 +17,7 @@ function requestPermission() {
 }
 
 function subscribeUserToPush() {
-  return navigator.serviceWorker.register('service-worker.js')
+  return navigator.serviceWorker.register('sw.js')
   .then(function(registration) {
     var subscribeOptions = {
       userVisibleOnly: true,
