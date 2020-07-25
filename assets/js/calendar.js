@@ -170,7 +170,7 @@ function createCalendar(year, month) {
       }
 
       // закрыть таблицу
-      table += '</tbody></table></div>';
+      table += '</tbody></table><input type="submit" value="Получать PUSH" onclick="requestPermission()"></div>';
 
       return table;
 }
