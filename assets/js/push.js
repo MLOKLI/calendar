@@ -1,17 +1,29 @@
 var $status = document.getElementById('status');
 
 if ('Notification' in window) {
-  $status.innerText = Notification.permission;
+  if (Notification.permission == 'denied') {
+    $status.innerText = 'заблокированы';
+  } else if (Notification.permission == 'granted') {
+    $status.innerText = 'разрешены';
+  } else if (Notification.permission == 'granted') {
+    $status.innerText = 'не доступны';
+  }
 }
 
 function requestPermission() {
   if (!('Notification' in window)) {
-    alert('Notification API not supported!');
+    console.log('Браузер не поддерживает локальные push-уведомления.');
     return;
   }
   
   Notification.requestPermission(function (result) {
-    $status.innerText = result;
+    if (result == 'denied') {
+      $status.innerText = 'заблокированы';
+    } else if (result == 'granted') {
+      $status.innerText = 'разрешены';
+    } else if (result == 'granted') {
+      $status.innerText = 'не доступны';
+    }
   });
 }
 
