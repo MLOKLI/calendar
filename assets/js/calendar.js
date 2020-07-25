@@ -116,7 +116,7 @@ function createCalendar(year, month) {
       let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
       let d = new Date(year, mon);
 
-      let table = '<div class="col-sm"><table class="table"><caption>'+monthName[month]+'</caption><thead><tr><th scope="col">ПН</th><th scope="col">ВТ</th><th scope="col">СР</th><th scope="col">ЧТ</th><th scope="col">ПТ</th><th scope="col">СБ</th><th scope="col">ВС</th></tr></thead><tbody>';
+      let table = '<div class="col-sm"><table class="table"><caption>'+monthName[month-1]+'</caption><thead><tr><th scope="col">ПН</th><th scope="col">ВТ</th><th scope="col">СР</th><th scope="col">ЧТ</th><th scope="col">ПТ</th><th scope="col">СБ</th><th scope="col">ВС</th></tr></thead><tbody>';
 
       // пробелы для первого ряда
       // с понедельника до первого дня месяца
