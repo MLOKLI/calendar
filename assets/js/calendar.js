@@ -133,7 +133,7 @@ function createCalendar(year, month) {
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()];
             }
-            if (today[0] == month && today[1] == d.getDate()) {
+            if (Number(today[0]+1) == month && Number(today[1]) == d.getDate()) {
                 table += ' Today';
             }
             table +='">' + d.getDate() + '</td>';
@@ -143,7 +143,7 @@ function createCalendar(year, month) {
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()];
             }
-            if (today[0]+1 == month && today[1] == d.getDate()) {
+            if (Number(today[0]+1) == month && Number(today[1]) == d.getDate()) {
                 table += ' Today';
             }
             table +='">' + d.getDate() + '</td>';
