@@ -132,7 +132,9 @@ function createCalendar(year, month) {
       while (d.getMonth() == mon) {
         
         if (getDay(d) % 7 == 6 || getDay(d) % 7 == 5) {
-            table += '<td class="output';
+            table += '<td ';
+            table += 'onclick="getDataTime('+month+', '+d.getDate()+')"';
+            table += ' class="output';
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()]['status'];
             }
@@ -214,4 +216,8 @@ function setingsUser() {
     $('.bg-login').toggleClass('none-block');
     $('#calendar').toggleClass('none-block');
     statusScript = 0;
+}
+
+function getDataTime(month, day) {
+    alert(month+' '+day);
 }
