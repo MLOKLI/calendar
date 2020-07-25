@@ -131,7 +131,7 @@ function createCalendar(year, month) {
         if (getDay(d) % 7 == 6 || getDay(d) % 7 == 5) {
             table += '<td class="output';
             if (typeof grafic[month] !== "undefined") {
-                table += ' '+grafic[month][d.getDate()];
+                table += ' '+grafic[month][d.getDate()]['status'];
             }
             if (Number(today[0]+1) == month && Number(today[1]) == d.getDate()) {
                 table += ' Today';
@@ -141,7 +141,7 @@ function createCalendar(year, month) {
         else {
             table += '<td class="weekdays';
             if (typeof grafic[month] !== "undefined") {
-                table += ' '+grafic[month][d.getDate()];
+                table += ' '+grafic[month][d.getDate()]['status'];
             }
             if (Number(today[0]+1) == month && Number(today[1]) == d.getDate()) {
                 table += ' Today';
