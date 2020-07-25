@@ -12,7 +12,7 @@ if ('Notification' in window) {
 
 function requestPermission() {
   if (!('Notification' in window)) {
-    alert('Notification API not supported!');
+    console.error('Браузер не поддерживает локальные push-уведомления.')
     return;
   }
   
@@ -22,27 +22,27 @@ function requestPermission() {
     } else if (result == 'granted') {
       $status.innerText = 'разрешены';
     } else {
-      $status.innerText = 'не доступны';
+      $status.innerText = 'не известны';
     }
   });
 }
 
 function nonPersistentNotification() {
   if (!('Notification' in window)) {
-    alert('Notification API not supported!');
+    console.error('Браузер не поддерживает локальные push-уведомления.');
     return;
   }
   
   try {
     var notification = new Notification("Hi there - non-persistent!");
   } catch (err) {
-    alert('Notification API error: ' + err);
+    console.error('Ошибка локальных push-уведомлений: ' + err);
   }
 }
 
 function persistentNotification() {
   if (!('Notification' in window) || !('ServiceWorkerRegistration' in window)) {
-    alert('Persistent Notification API not supported!');
+    console.error('Браузер не поддерживает локальные push-уведомления.');
     return;
   }
   
@@ -51,6 +51,6 @@ function persistentNotification() {
       .then((reg) => reg.showNotification("Hi there - persistent!"))
       .catch((err) => alert('Service Worker registration error: ' + err));
   } catch (err) {
-    alert('Notification API error: ' + err);
+    console.error('Ошибка локальных push-уведомлений: ' + err);
   }
 }
