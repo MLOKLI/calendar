@@ -62,7 +62,7 @@ $.ajax({
                 else { statusJob = 'dop-2'; }
             }
             else { statusJob = ''; time = null;}
-            grafic[month][Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2))] = {'status': statusJob, 'time:': time};
+            grafic[month][Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2))] = {'status': statusJob, 'time': time};
         }
         else {
             console.log(result['result'][i][0]+' | '+result['result'][i][numberUser]);
