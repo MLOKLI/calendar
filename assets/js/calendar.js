@@ -149,7 +149,7 @@ function createCalendar(year, month) {
             table +='">' + d.getDate() + '</td>';
         }
           
-        console.log('Печатает: '+d.getDate()+'.'+month+' | Сейчас: '+Number(today[1])+'.'+Number(today[0]+1))
+        //console.log('Печатает: '+d.getDate()+'.'+month+' | Сейчас: '+Number(today[1])+'.'+Number(today[0]+1))
 
         if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
           table += '</tr><tr>';
