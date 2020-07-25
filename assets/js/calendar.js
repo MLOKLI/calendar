@@ -185,6 +185,9 @@ $("#quarter").change(function() {
 });
     
 $('#enter').click(function() {
+        statusScript = 1;
+        $('.bg-login').toggleClass('none-block');
+        $('#calendar').toggleClass('none-block');
         getData($( "#quarter" ).val());
         localStorage.setItem('nameUser', $( "#family" ).val());
         localStorage.setItem('quarterUser', $( "#quarter" ).val());
