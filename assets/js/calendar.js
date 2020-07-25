@@ -132,9 +132,7 @@ function createCalendar(year, month) {
       while (d.getMonth() == mon) {
         
         if (getDay(d) % 7 == 6 || getDay(d) % 7 == 5) {
-            table += '<td ';
-            table += 'onclick="getDataTime('+month+', '+d.getDate()+')"';
-            table += ' class="output';
+            table += '<td onclick="getDataTime('+month+', '+d.getDate()+')" class="output';
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()]['status'];
             }
@@ -144,7 +142,7 @@ function createCalendar(year, month) {
             table +='">' + d.getDate() + '</td>';
         }
         else {
-            table += '<td class="weekdays';
+            table += '<td onclick="getDataTime('+month+', '+d.getDate()+')" class="weekdays';
             if (typeof grafic[month] !== "undefined") {
                 table += ' '+grafic[month][d.getDate()]['status'];
             }
