@@ -217,9 +217,11 @@ function setingsUser() {
 }
 
 function getDataTime(month, day) {
+    $('#Windows').empty();
     if (grafic[month][day]['time'] != null) {
-        console.log('Рабочий день с '+grafic[month][day]['time'][0]+' до '+grafic[month][day]['time'][1]);
+        //console.log('Рабочий день с '+grafic[month][day]['time'][0]+' до '+grafic[month][day]['time'][1]);
+        $('#Windows').append('<div class="alert alert-primary alert-dismissible fade show" role="alert"><strong>Рабочий день.</strong> С '+grafic[month][day]['time'][0]+' до '+grafic[month][day]['time'][1]+'.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>');
     } else {
-        console.log('Выходной день. Отдыхай!');
+        $('#Windows').append('<div class="alert alert-secondary alert-dismissible fade show" role="alert"><strong>Выходной.</strong> Отдыхай :)<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>');
     }
 }
