@@ -196,7 +196,7 @@ if (localStorage.length == 2) {
     $('.bg-login').toggleClass('none-block');
     $('#calendar').toggleClass('none-block');
     $('#calendar').empty();
-    $('#calendar').append('<h1>Загрузка календаря</h1>');
+    $('#calendar').append('<section class="bg-login"><div class="container"><div class="row"><div class="col-lg-12 col-sm-12"><div class="wrapper-page"><div class="account-pages"><div class="account-box"><div class="card m-b-30 text-align text-uppercase">Загрузка календаря...</div></div></div></div></div></div></div></section>');
 } else {
     localStorage.clear();
 }
