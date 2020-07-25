@@ -145,7 +145,10 @@
 
     <div id="calendar"></div>
 	-->
-	
+	<p>Current permission status is <b id="status">unavailable</b>.</p>
+	<p><button onclick="requestPermission()">Request permission</button></p>
+	<p><button onclick="nonPersistentNotification()">Non-persistent notification</button></p>
+	<p><button onclick="persistentNotification()">Persistent notification</button></p>
 	
 	
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
