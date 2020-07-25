@@ -217,7 +217,7 @@ function setingsUser() {
 }
 
 function getDataTime(month, day) {
-    if (grafic[month][day][time] != null) {
+    if (grafic[month][day]['time'] != null) {
         console.log('Рабочий день с '+grafic[month][day][time][0]+' до '+grafic[month][day][time][1]);
     } else {
         console.log('Выходной день. Отдыхай!');
