@@ -48,8 +48,13 @@ function persistentNotification() {
   
   try {
     navigator.serviceWorker.getRegistration()
-      .then((reg) => reg.showNotification("Hi there - persistent!"))
-      .catch((err) => alert('Service Worker registration error: ' + err));
+      .then((reg) => reg.showNotification("Hi there - persistent!", {
+          body: 'Buzz! Buzz!',
+          icon: '../assets/icons/apple-icon-180x180.png',
+          vibrate: [200, 100, 200, 100, 200, 100, 200],
+          tag: 'vibration-sample'
+        }))
+      .catch((err) => console.error('Service Worker ошибка регистрации: ' + err));
   } catch (err) {
     console.error('Ошибка локальных push-уведомлений: ' + err);
   }
