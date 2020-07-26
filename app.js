@@ -1,4 +1,3 @@
-
 firebase.initializeApp({
     messagingSenderId: '796937025956'
 });
