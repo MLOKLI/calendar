@@ -29,10 +29,6 @@ let quarterUrl = [
 // dop-2 - доп-вечер
 let grafic = {};
 function getData(data) {
-
-console.log(data)
-console.log(quarterUrl)
-console.log(quarterUrl[data-1])
     
 let table = '';
 $.ajax({
