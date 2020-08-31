@@ -43,6 +43,7 @@ $.ajax({
     let numberUser = null;
     let month = 0;
     let statusJob = '';
+    /*
     for (let i=1; i<result['result'].length-14; i++) {
         if (monthName.indexOf(result['result'][i][0]) != -1) {
             month = monthName.indexOf(result['result'][i][0])+1;
@@ -63,7 +64,7 @@ $.ajax({
                 else { statusJob = 'dop-2'; }
             }
             else { statusJob = ''; time = null;}
-            console.log(Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2)));
+            //console.log(Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2)));
             //grafic[month][Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2))] = {'status': statusJob, 'time': time};
         }
         else {
@@ -114,6 +115,7 @@ $.ajax({
     }
 })
 
+    */
 }
 
 function createCalendar(year, month) {
