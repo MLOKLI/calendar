@@ -49,7 +49,7 @@ $.ajax({
             grafic[month] = {};
             //console.log(result['result'][i][0]+' | '+result['result'][i][22]);
         }
-        else if (result['result'][i][0].search('2020-0'+month+'.+') == 0) {
+        else if (result['result'][i][0].search('2020-0'+month+'.+') == 0 || result['result'][i][0].search('2020-'+month+'.+') == 0) {
             //console.log(result['result'][i][0]);
             let time = '';
             if (result['result'][i][numberUser] != '') {
@@ -63,6 +63,7 @@ $.ajax({
             }
             else { statusJob = ''; time = null;}
             grafic[month][Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2))] = {'status': statusJob, 'time': time};
+            console.log(Number(result['result'][i][0].match('\(2020-0'+month+'-)[0-9]+')[0].substr(8, 2)));
         }
         else {
             console.log(result['result'][i][0]+' | '+result['result'][i][numberUser]);
