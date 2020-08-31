@@ -35,6 +35,7 @@ $.ajax({
     url: quarterUrl[data-1]//'https://script.google.com/macros/s/AKfycbz4D_xFAYYJxNF6FJeC95gRH9vdJSGh_d7cHb0TdpYGJRLjI1Us/exec'
 }).then(function (result) {
     var dataCalendar = result;
+    console.log(dataCalendar);
     //console.log(result['result'][1][0])
     //console.log(result['result'][1][22])
     //console.log(result['result'][2][0])
