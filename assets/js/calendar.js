@@ -30,6 +30,10 @@ let quarterUrl = [
 let grafic = {};
 function getData(data) {
 
+console.log(data)
+console.log(quarterUrl)
+console.log(quarterUrl[data])
+    
 let table = '';
 $.ajax({
     url: quarterUrl[data]//'https://script.google.com/macros/s/AKfycbz4D_xFAYYJxNF6FJeC95gRH9vdJSGh_d7cHb0TdpYGJRLjI1Us/exec'
