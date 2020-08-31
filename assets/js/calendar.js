@@ -32,7 +32,7 @@ function getData(data) {
 
 let table = '';
 $.ajax({
-    url: 'https://script.google.com/macros/s/AKfycbz4D_xFAYYJxNF6FJeC95gRH9vdJSGh_d7cHb0TdpYGJRLjI1Us/exec'
+    url: quarterUrl[$( "#quarter" ).val()]//'https://script.google.com/macros/s/AKfycbz4D_xFAYYJxNF6FJeC95gRH9vdJSGh_d7cHb0TdpYGJRLjI1Us/exec'
 }).then(function (result) {
     //console.log(result['result'][1][0])
     //console.log(result['result'][1][22])
