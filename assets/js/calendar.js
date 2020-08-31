@@ -114,9 +114,9 @@ $.ajax({
         $('.bg-login').toggleClass('none-block');
         $('#calendar').toggleClass('none-block');
     }
-})
 
     */
+})
 }
 
 function createCalendar(year, month) {
