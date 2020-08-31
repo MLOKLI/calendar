@@ -37,8 +37,8 @@ $.ajax({
     console.log(result['result'][1][0])
     console.log(result['result'][1][22])
     console.log(result['result'][2][0])
-    console.log(result['result'][i].indexOf($( "#family" ).val()));
-    console.log(result['result'][i].search($( "#family" ).val()));
+    console.log(result['result'][i].indexOf(localStorage.getItem('nameUser')));
+    console.log(result['result'][i].search(localStorage.getItem('nameUser')));
     let numberUser = null;
     let month = 0;
     let statusJob = '';
